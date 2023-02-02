@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -11,8 +12,26 @@
         <div class="main-container">
             <section class="content">
                 <h1>Cash Register</h1>
-                <p>Please enter the total for the order</p>
+                <p>Please enter the price, the cash used to pay and the cash in the drawer</p>
             </section>
+
+        <form id="user-inputs">
+            <div class="input">
+                <label for="price-amount">Price</label>
+                <input type="text" name="price-amount" id="price-amount" placeholder="enter amount here" required>
+            </div>
+
+            <div class="cash-amount">
+                <label for="cash-amount">Cash</label>
+                <input type="text" name="cash-amount" id="cash-amount" placeholder="enter amount here" required>
+            </div>
+
+            <div class="cid">
+                <label for="cid">Cash In Drawer</label>
+                <input type="text" name="cid" id="cid" placeholder="enter 2D array" required>
+            </div>
+
+        </form>
         </div>
     </main>
 </body>
