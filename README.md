@@ -1,2 +1,2 @@
-# Group3CashRegister-
+# Group3CashRegister
 Cash Register Project 
