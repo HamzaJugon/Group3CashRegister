@@ -24,7 +24,7 @@ function cashRegister(price, cash, cid) {
     if (cash < price) {
         return {status: "INCORRECT_PAYMENT", change: []}
     } else {
-        var changeNeed = cash - price;
+        var ChangeDue = cash - price;
     }
     
     //calculate total cash in drawer (CID).
@@ -36,13 +36,14 @@ function cashRegister(price, cash, cid) {
         }
     
     // check enough CID for change.
-    if (changeNeed > totalCashInDrawer) {
-        return {status: "INSUFFICIENT_FUNDS", change: []}
-    }
+    if (ChangeDue > totalCashInDrawer) {
+        return {status: "INSUFFICIENT_FUNDS", change: []};
+    } 
+    
     
     // now check if exact change can be given.
         // round to 2 decimal places cuz money.
-    if (changeNeed.toFixed(2) === totalCashInDrawer.toFixed(2)) {
+    if (ChangeDue.toFixed(2) === totalCashInDrawer.toFixed(2)) {
         return {status: "CLOSED", change: cid}
     }
     
@@ -56,13 +57,13 @@ function cashRegister(price, cash, cid) {
             let currencyValue = currencyTypes[currencyName];
             let currencyCount = 0;
     
-            // check changeNeed is more or = to currency value and if CID has money.
-                // true = reduce changeNeed by currencyValue.
+            // check ChangeDue is more or = to currency value and if CID has money.
+                // true = reduce ChangeDue by currencyValue.
                 // true = reduce CID by currencyValue.
                     // record of number of that currency being used as change.
-                while (changeNeed >= currencyValue && cid[i][1] > 0) {
-                    changeNeed -= currencyValue;
-                    changeNeed = changeNeed.toFixed(2);
+                while (ChangeDue >= currencyValue && cid[i][1] > 0) {
+                    ChangeDue -= currencyValue;
+                    ChangeDue = ChangeDue.toFixed(2);
                     cid[0][1] -= currencyValue;
                     currencyCount ++
                 }
@@ -75,7 +76,7 @@ function cashRegister(price, cash, cid) {
         }
     
         //check if exact change can be given.
-        if (changeNeed > 0) {
+        if (ChangeDue > 0) {
             return {status: "INSUFFICIENT_FUNDS", change: []};
         }
     
@@ -89,4 +90,6 @@ function cashRegister(price, cash, cid) {
 -----------------------------------------------------------------------------------------------------------------------------
 
     */
+
+console.log("Script connected!");
 

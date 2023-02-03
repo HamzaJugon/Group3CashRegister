@@ -18,6 +18,7 @@ h1 { /* Instead of using the color: function - we call the 'main-color' variable
     color:  rgb(32, 121, 159);
     letter-spacing: 0.5px;
     font-size: 27px;
+    animation: rainbow-flash 1s ease-in-out infinite;
 }
 
 #user-input {
@@ -46,7 +47,7 @@ h1 { /* Instead of using the color: function - we call the 'main-color' variable
     color: white;
 }
 
-.input-boxes label { /* Adding gaps to the inout box titles and fixing font size */
+.input-boxes label { /* Adding gaps to the input box titles and fixing font size */
     padding-bottom: 0.25rem;
     font-size: 18px;
     letter-spacing: 0.5px;
@@ -80,3 +81,61 @@ button:hover {
     font-weight: bold;
   }
 
+  .group-name {
+    animation: pulsate 2s ease-out infinite;
+    text-shadow: 0 0 20px rgb(255, 0, 0), 0 0 30px #e100ff, 0 0 40px #1100ff, 0 0 50px #ae00ff, 0 0 60px #ff00ff, 0 0 70px #002fff;
+  }
+  
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .title {
+    border: solid 2px rgb(255, 0, 0);
+    animation: border-pulse 1s ease-out infinite;
+  }
+  
+  @keyframes border-pulse {
+    0% {
+      border-color: rgb(0, 0, 0);
+    }
+    100% {
+      border-color: rainbow;
+    }
+  }
+  
+  h2 {
+    animation: rainbow-flash 1s ease-in-out infinite;
+  }
+  
+  @keyframes rainbow-flash {
+    0% {
+      color: red;
+    }
+    20% {
+      color: orange;
+    }
+    40% {
+      color: rgb(126, 126, 40);
+    }
+    60% {
+      color: green;
+    }
+    80% {
+      color: blue;
+    }
+    100% {
+      color: purple;
+    }
+  }
+  
+ 
+ 
