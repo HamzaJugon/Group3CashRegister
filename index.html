@@ -4,35 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <main>
         <div class="main-container">
-            <section class="content">
+            <section class="title">
                 <h1>Cash Register</h1>
                 <p>Please enter the price, the cash used to pay and the cash in the drawer</p>
             </section>
 
-        <form id="user-inputs">
-            <div class="input">
-                <label for="price-amount">Price</label>
-                <input type="text" name="price-amount" id="price-amount" placeholder="enter amount here" required>
-            </div>
+            <form id="user-input">
+                <div class="input-boxes">
+                    <label for="price-amount">Price</label>
+                    <input type="text" name="price-amount" id="price-amount" placeholder="enter amount here" required>
+                </div>
 
-            <div class="cash-amount">
-                <label for="cash-amount">Cash</label>
-                <input type="text" name="cash-amount" id="cash-amount" placeholder="enter amount here" required>
-            </div>
+                <div class="input-boxes">
+                    <label for="cash-amount">Cash</label>
+                    <input type="text" name="cash-amount" id="cash-amount" placeholder="enter amount here" required>
+                </div>
 
-            <div class="cid">
-                <label for="cid">Cash In Drawer</label>
-                <input type="text" name="cid" id="cid" placeholder="enter 2D array" required>
-            </div>
+                <div class="input-boxes">
+                    <label for="cid">Cash In Drawer</label>
+                    <input type="text" name="cid" id="cid" placeholder="enter 2D array" required>
+                </div>
 
-        </form>
+                <div class="input-boxes">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            
+            <section class="change">
+                <h2>Change</h2>
+                <table class="change-output">
+                    <tbody>
+                        <tr>
+                            <th>Currency Unit</th>
+                            <td>$0.01</td>
+                            <td>$0.05</td>
+                            <td>$0.10</td>
+                            <td>$0.25</td>
+                            <td>$1</td>
+                            <td>$5</td>
+                            <td>$10</td>
+                            <td>$20</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr> <!-- The numbers in this section are to be determined by the fuctions 
+                            - the 0's are placeholders -->
+                            <th>Quantity</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        
         </div>
     </main>
+
+    <footer>
+        <p class="group-name">Footer - Idk what to put here</p>
+    </footer>
 </body>
 </html>

@@ -1,1 +1,64 @@
 /* Stylesheet */
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+h1 { /* Instead of using the color: function - we call the 'main-color' variable we have already set */
+    color:  rgb(32, 121, 159);
+    letter-spacing: 0.5px;
+    font-size: 27px;
+}
+
+#user-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-boxes { /* This will stack the boxes and text and make the boxes take up a larger width of the page */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-boxes:last-child{ /* need to select the last of the input-boxes */
+    /* text-align: center; did not work for some reason so I used display flex to get the button to the middle*/ 
+    display: flex;
+    align-items: center;
+}
+
+.input-boxes button{ /* Editing the submission button */ 
+    margin-top: 0.75rem; 
+    padding: 0.5rem 1.5rem;
+    background-color:  rgb(32, 121, 159);
+    border:none;
+    border-radius: 5px;
+    color: white;
+}
+
+.input-boxes label { /* Adding gaps to the inout box titles and fixing font size */
+    padding-bottom: 0.25rem;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.change h2{ /* Styling the header for the change section */
+    color:  rgb(32, 121, 159);
+    font-size: 27px;
+}
+
+
+
+
+
+
