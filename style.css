@@ -74,3 +74,9 @@ th, td{
     padding: 10px; /* Space between cells */
 }
 
+button:hover {
+    background-color: green;
+    transform: scale(1.1);
+    font-weight: bold;
+  }
+
