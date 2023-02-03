@@ -22,7 +22,7 @@ function cashRegister(price, cash, cid) {
     
     // calculate change.
     if (cash < price) {
-        return {status: "INSUFFICIENT_FUNDS", change: []}
+        return {status: "INCORRECT_PAYMENT", change: []}
     } else {
         var changeNeed = cash - price;
     }
