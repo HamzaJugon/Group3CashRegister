@@ -8,17 +8,15 @@ cid - cash-in-drawer
 function checkRegister(price, cash, cid) { 
 // 2D array listing available currency.
     const currencyTypes = {
-        "ONE PENNY": 0.01, // [0][1] = 0.01
-        "TWO PENCE": 0.02, // [1][1] = 0.02
-        "FIVE PENCE": 0.05,// [2][1]
-        "TEN PENCE": 0.10,
-        "TWENTY PENCE": 0.20,
-        "FIFTY PENCE": 0.50,
-        "ONE POUND": 1,
-        "FIVE POUND NOTE": 5,
-        "TEN POUND NOTE": 10,
-        "TWENTY POUND NOTE": 20,
-        "FIFTY POUND NOTE": 50
+        "PENNY": 0.01, // [0][1] = 0.01
+        "NICKEL": 0.05,// [1][1] = 0.02
+        "DIME": 0.1,    // [2][1]
+        "QUARTER": 0.25,
+        "ONE": 1,
+        "FIVE": 5,
+        "TEN": 10,
+        "TWENTY": 20,
+        "ONE HUNDRED": 100
     };
 
 // calculate change.
