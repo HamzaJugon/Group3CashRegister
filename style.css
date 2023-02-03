@@ -57,8 +57,20 @@ h1 { /* Instead of using the color: function - we call the 'main-color' variable
     font-size: 27px;
 }
 
+.change-output{
+ 
+}
 
+th{ /* Styling table headers */
+    text-align: left;
+}
 
+table, th, td{ /* Styling table borders */
+    border: 3px solid rgb(32, 121, 159);
+    border-collapse: collapse; /* Merges each cell's individual borders */
+}
 
-
+th, td{
+    padding: 10px; /* Space between cells */
+}
 
