@@ -1,106 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
-      th, td {
-        padding: 5px;
-      }
-    </style>
+    <meta charset="UTF-8">
+    <title>Cash Register</title>
   </head>
   <body>
-    <h2>Cash Register</h2>
-
+    <h1>Cash Register </h1>
     <form>
-      <label for="price">Price:</label>
-      <input type="number" id="price" name="price"><br><br>
-
-      <label for="cash">Cash:</label>
-      <input type="number" id="cash" name="cash"><br><br>
-
-      <label for="cid">Cash in Drawer:</label>
-      <input type="text" id="cid" name="cid"><br><br>
-
-      <button onclick="calculateChange()">Calculate Change</button>
+      <label>Price:</label>
+      <input type="text" id="price"><br><br>
+      <label>Cash Used to Pay:</label>
+      <input type="text" id="cashPaid"><br><br>
+      <button type="button" id="submitButton">Submit</button>
     </form>
-
-    <br><br>
-    <table id="changeTable">
-      <tr>
-        <th>Currency</th>
-        <th>Amount</th>
-      </tr>
-    </table>
-
-    
-    <script>
-      function calculateChange() {
-  const currencyUnit = [   
-     { name: "ONE HUNDRED", value: 100.0 },    
-     { name: "TWENTY", value: 20.0 },    
-     { name: "TEN", value: 10.0 },    
-     { name: "FIVE", value: 5.0 },    
-     { name: "ONE", value: 1.0 },    
-     { name: "QUARTER", value: 0.25 },    
-     { name: "DIME", value: 0.1 },    
-     { name: "NICKEL", value: 0.05 },    
-     { name: "PENNY", value: 0.01 }  
-    ];
-
-  const price = document.getElementById("price").value;
-  const cash = document.getElementById("cash").value;
-  let cid = JSON.parse(document.getElementById("cid").value);
-
-  let change = cash - price;
-
-  // Check if cash in drawer is sufficient for change
-  let totalCID = 0;
-  for (let i = 0; i < cid.length; i++) {
-    totalCID += cid[i][1];
-  }
-
-  totalCID = parseFloat(totalCID.toFixed(2));
-
-  if (totalCID < change) {
-    console.log("Insufficient Funds");
-  } else if (totalCID === change) {
-    console.log("Closed");
-  } else {
-    // Calculate the change to be given
-    let changeGiven = [];
-    for (let i = 0; i < currencyUnit.length; i++) {
-      let value = 0;
-
-      while (change >= currencyUnit[i].value && cid[i][1] >= currencyUnit[i].value) {
-        value += currencyUnit[i].value;
-        change -= currencyUnit[i].value;
-        change = parseFloat(change.toFixed(2));
-        cid[i][1] -= currencyUnit[i].value;
-      }
-
-      if (value > 0) {
-        changeGiven.push([currencyUnit[i].name, value]);
-      }
-    }
-
-    // Display the result in a table
-    let changeTable = document.getElementById("changeTable");
-
-    for (let i = 0; i < changeGiven.length; i++) {
-      let row = changeTable.insertRow();
-      let currencyCell = row.insertCell(0);
-      let amountCell = row.insertCell(1);
-
-      currencyCell.innerHTML = changeGiven[i][0];
-      amountCell.innerHTML = changeGiven[i][1];
-    }
-  }
-}
-
-</script>
-</body>
+    <div id="result"></div>
+  </body>
+  <script src="Script/script.js" defer></script>
 </html>
-

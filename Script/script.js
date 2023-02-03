@@ -90,6 +90,20 @@ function cashRegister(price, cash, cid) {
 -----------------------------------------------------------------------------------------------------------------------------
 
     */
-
+// Connection
 console.log("Script connected!");
+
+const form = document.getElementById("user-input");
+const priceInput = document.getElementById("price-amount");
+const cashInput = document.getElementById("cash-amount");
+const cidInput = document.getElementById("cid");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const price = parseFloat(priceInput.value);
+  const cash = parseFloat(cashInput.value);
+  const cid = JSON.parse(cidInput.value);
+  const result = cashRegister(price, cash, cid);
+  console.log(result);
+});
 
