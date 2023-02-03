@@ -15,7 +15,6 @@ body {
 }
 
 h1 { /* Instead of using the color: function - we call the 'main-color' variable we have already set */
-    color:  rgb(32, 121, 159);
     letter-spacing: 0.5px;
     font-size: 27px;
     animation: rainbow-flash 1s ease-in-out infinite;
