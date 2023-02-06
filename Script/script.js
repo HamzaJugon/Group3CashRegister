@@ -87,8 +87,6 @@ function cashRegister(price, cash, cid) {
 
     */
 // Connection
-console.log("Script connected!");
-
 const form = document.getElementById("user-input");
 const priceInput = document.getElementById("price-amount");
 const cashInput = document.getElementById("cash-amount");
@@ -101,7 +99,6 @@ form.addEventListener("submit", function (event) {
   const cid = JSON.parse(cidInput.value);
   const result = cashRegister(price, cash, cid);
   const resultArr = result.change;
-
   const change = document.createElement("h3");
 
   if (resultArr.length === 1) {
@@ -114,5 +111,49 @@ form.addEventListener("submit", function (event) {
     }
     change.innerText = `Your change is $${sum}.00`;
     document.querySelector(".result").append(change);
+  }
+
+  for (let i = 0; i < resultArr.length; i++) {
+    let quantity = 0;
+
+    switch (resultArr[i][0]) {
+      case "PENNY":
+        quantity += resultArr[i][1] / 0.01;
+        document.getElementById("penny").innerText = quantity;
+
+        break;
+      case "NICKEL":
+        quantity += resultArr[i][1] / 0.05;
+        document.getElementById("nickel").innerText = quantity;
+        break;
+      case "DIME":
+        quantity += resultArr[i][1] / 0.1;
+        document.getElementById("dime").innerText = quantity;
+        break;
+      case "QUARTER":
+        quantity += resultArr[i][1] / 0.25;
+        document.getElementById("quarter").innerText = quantity;
+        break;
+      case "ONE":
+        quantity += resultArr[i][1] / 1;
+        document.getElementById("one").innerText = quantity;
+        break;
+      case "FIVE":
+        quantity += resultArr[i][1] / 5;
+        document.getElementById("five").innerText = quantity;
+        break;
+      case "TEN":
+        quantity += resultArr[i][1] / 10;
+        document.getElementById("ten").innerText = quantity;
+        break;
+      case "TWENTY":
+        quantity += resultArr[i][1] / 20;
+        document.getElementById("twenty").innerText = quantity;
+        break;
+      case "ONE HUNDRED":
+        quantity += resultArr[i][1] / 100;
+        document.getElementById("hundred").innerText = quantity;
+        break;
+    }
   }
 });
