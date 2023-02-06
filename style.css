@@ -78,20 +78,14 @@ th {
   text-align: left;
 }
 
-<<<<<<< HEAD
-table, th, td{ /* Styling table borders */
-    border: 3px solid rgb(32, 121, 159);
-    border-collapse: collapse; /* Merges each cell's individual borders */
-    margin-left: auto; /* Center table */
-    margin-right: auto;
-=======
 table,
 th,
 td {
   /* Styling table borders */
   border: 3px solid rgb(32, 121, 159);
   border-collapse: collapse; /* Merges each cell's individual borders */
->>>>>>> 792aa327f8009eaad224bbf4d2aa232abf58b940
+  margin-left: auto;
+  margin-right: auto;
 }
 
 th,
@@ -124,8 +118,11 @@ button:hover {
 }
 
 .title {
-  border: solid 2px rgb(255, 0, 0);
-  animation: border-pulse 1s ease-out infinite;
+  border-bottom: solid 2px rgb(255, 0, 0);
+  animation: border-pulse 2s ease-out infinite;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
 }
 
 @keyframes border-pulse {
