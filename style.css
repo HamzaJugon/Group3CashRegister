@@ -75,11 +75,19 @@ h1 {
   width: 600px;
 }
 
+.change {
+  text-align: center;
+}
+
 .change h2 {
   /* Styling the header for the change section */
   color: rgb(32, 121, 159);
   font-size: 27px;
-  text-align: center;
+}
+
+.change h3 {
+  color: #54b435;
+  font-weight: bolder;
 }
 
 /* .change-output{
