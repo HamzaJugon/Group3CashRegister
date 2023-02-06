@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <script src="Script/script.js"defer></script>
+    <script src="Script/script.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
     <main>
         <div class="main-container">
             <section class="title">
-                 <h1>Cash Register</h1>
+                <h1>Cash Register</h1>
                 <p>Please enter the price, the cash used to pay and the cash in the drawer</p>
             </section>
 
@@ -34,16 +36,18 @@
                 <div class="input-boxes">
                     <label for="cid">Cash In Drawer</label>
                     <input type="text" name="cid" id="cid" placeholder="Enter 2D Array" required>
-                    <p><strong>EXAMPLE:</strong> [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]]</p>
+                    <p><strong>EXAMPLE:</strong> [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25],
+                        ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]]</p>
                 </div>
 
                 <div class="input-boxes">
                     <button type="submit" id="submit-button">Submit</button>
                 </div>
             </form>
-            
+
             <section class="change">
                 <h2>Change</h2>
+                <h3 class="result"></h3>
                 <table class="change-output">
                     <tbody>
                         <tr>
@@ -74,11 +78,11 @@
                     </tbody>
                 </table>
             </section>
-        
+
         </div>
 
 
-        
+
 
     </main>
 
@@ -86,4 +90,5 @@
         <p class="group-name">-Made with Love by Doreen, Ehsaan, Hamza & Kegi-</p>
     </footer>
 </body>
+
 </html>
