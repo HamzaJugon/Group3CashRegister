@@ -13,23 +13,26 @@ body {
 }
 
 main {
-  height: 100vh;
+  height: 120vh;
   background-color: rgb(255, 255, 255);
   margin: 40px 70px;
   border-radius: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 15px;
 }
 
 h1 {
   /* Instead of using the color: function - we call the 'main-color' variable we have already set */
   letter-spacing: 0.5px;
-  font-size: 27px;
-  animation: rainbow-flash 1s ease-in-out infinite;
+  font-size: 35px;
+  animation: rainbow-flash 2s ease-in-out infinite;
 }
 
-#user-input {
+#user-input > div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-boxes {
@@ -50,10 +53,14 @@ h1 {
   /* Editing the submission button */
   margin-top: 0.75rem;
   padding: 0.5rem 1.5rem;
-  background-color: rgb(32, 121, 159);
+  background-color: #3f979b;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   color: white;
+  font-weight: 600;
+  height: 40px;
+  width: 150px;
+  cursor: pointer;
 }
 
 .input-boxes label {
@@ -61,6 +68,11 @@ h1 {
   padding-bottom: 0.25rem;
   font-size: 18px;
   letter-spacing: 0.5px;
+}
+
+.input-boxes input {
+  height: 30px;
+  width: 600px;
 }
 
 .change h2 {
@@ -135,7 +147,7 @@ button:hover {
 }
 
 h2 {
-  animation: rainbow-flash 1s ease-in-out infinite;
+  animation: rainbow-flash 2s ease-in-out infinite;
 }
 
 @keyframes rainbow-flash {
