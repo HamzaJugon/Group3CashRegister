@@ -2,6 +2,4 @@
 
 Cash Register Project
 
-Hi I am Kegi - Git working!
-
-hhih
+By Group 3 - Hamza, Doreen, Kegi, Ehsaan

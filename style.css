@@ -57,10 +57,10 @@ h1 { /* Instead of using the color: function - we call the 'main-color' variable
     font-size: 27px;
 }
 
-.change-output{
+/* .change-output{
  
 }
-
+ */
 th{ /* Styling table headers */
     text-align: left;
 }
