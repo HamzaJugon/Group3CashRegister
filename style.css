@@ -68,6 +68,8 @@ th{ /* Styling table headers */
 table, th, td{ /* Styling table borders */
     border: 3px solid rgb(32, 121, 159);
     border-collapse: collapse; /* Merges each cell's individual borders */
+    margin-left: auto; /* Center table */
+    margin-right: auto;
 }
 
 th, td{
