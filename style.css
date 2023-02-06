@@ -1,140 +1,155 @@
 /* Stylesheet */
 
 html {
-    font-size: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: #cee6b4;
+  padding: 0;
+  margin: 0;
 }
 
-h1 { /* Instead of using the color: function - we call the 'main-color' variable we have already set */
-    letter-spacing: 0.5px;
-    font-size: 27px;
-    animation: rainbow-flash 1s ease-in-out infinite;
+main {
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  margin: 40px 70px;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+h1 {
+  /* Instead of using the color: function - we call the 'main-color' variable we have already set */
+  letter-spacing: 0.5px;
+  font-size: 27px;
+  animation: rainbow-flash 1s ease-in-out infinite;
 }
 
 #user-input {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.input-boxes { /* This will stack the boxes and text and make the boxes take up a larger width of the page */
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
+.input-boxes {
+  /* This will stack the boxes and text and make the boxes take up a larger width of the page */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.input-boxes:last-child{ /* need to select the last of the input-boxes */
-    /* text-align: center; did not work for some reason so I used display flex to get the button to the middle*/ 
-    display: flex;
-    align-items: center;
+.input-boxes:last-child {
+  /* need to select the last of the input-boxes */
+  /* text-align: center; did not work for some reason so I used display flex to get the button to the middle*/
+  display: flex;
+  align-items: center;
 }
 
-.input-boxes button{ /* Editing the submission button */ 
-    margin-top: 0.75rem; 
-    padding: 0.5rem 1.5rem;
-    background-color:  rgb(32, 121, 159);
-    border:none;
-    border-radius: 5px;
-    color: white;
+.input-boxes button {
+  /* Editing the submission button */
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.5rem;
+  background-color: rgb(32, 121, 159);
+  border: none;
+  border-radius: 5px;
+  color: white;
 }
 
-.input-boxes label { /* Adding gaps to the input box titles and fixing font size */
-    padding-bottom: 0.25rem;
-    font-size: 18px;
-    letter-spacing: 0.5px;
+.input-boxes label {
+  /* Adding gaps to the input box titles and fixing font size */
+  padding-bottom: 0.25rem;
+  font-size: 18px;
+  letter-spacing: 0.5px;
 }
 
-.change h2{ /* Styling the header for the change section */
-    color:  rgb(32, 121, 159);
-    font-size: 27px;
+.change h2 {
+  /* Styling the header for the change section */
+  color: rgb(32, 121, 159);
+  font-size: 27px;
 }
 
 /* .change-output{
  
 }
  */
-th{ /* Styling table headers */
-    text-align: left;
+th {
+  /* Styling table headers */
+  text-align: left;
 }
 
-table, th, td{ /* Styling table borders */
-    border: 3px solid rgb(32, 121, 159);
-    border-collapse: collapse; /* Merges each cell's individual borders */
+table,
+th,
+td {
+  /* Styling table borders */
+  border: 3px solid rgb(32, 121, 159);
+  border-collapse: collapse; /* Merges each cell's individual borders */
 }
 
-th, td{
-    padding: 10px; /* Space between cells */
+th,
+td {
+  padding: 10px; /* Space between cells */
 }
 
 button:hover {
-    background-color: green;
-    transform: scale(1.1);
-    font-weight: bold;
-  }
+  background-color: green;
+  transform: scale(1.1);
+  font-weight: bold;
+}
 
-  .group-name {
-    animation: pulsate 2s ease-out infinite;
-    text-shadow: 0 0 20px rgb(255, 0, 0), 0 0 30px #e100ff, 0 0 40px #1100ff, 0 0 50px #ae00ff, 0 0 60px #ff00ff, 0 0 70px #002fff;
-  }
-  
-  @keyframes pulsate {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+.group-name {
+  animation: pulsate 2s ease-out infinite;
+  text-shadow: 0 0 20px rgb(255, 0, 0), 0 0 30px #e100ff, 0 0 40px #1100ff,
+    0 0 50px #ae00ff, 0 0 60px #ff00ff, 0 0 70px #002fff;
+}
 
-  .title {
-    border: solid 2px rgb(255, 0, 0);
-    animation: border-pulse 1s ease-out infinite;
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
   }
-  
-  @keyframes border-pulse {
-    0% {
-      border-color: rgb(0, 0, 0);
-    }
-    100% {
-      border-color: rainbow;
-    }
+  50% {
+    transform: scale(1.05);
   }
-  
-  h2 {
-    animation: rainbow-flash 1s ease-in-out infinite;
+  100% {
+    transform: scale(1);
   }
-  
-  @keyframes rainbow-flash {
-    0% {
-      color: red;
-    }
-    20% {
-      color: orange;
-    }
-    40% {
-      color: rgb(126, 126, 40);
-    }
-    60% {
-      color: green;
-    }
-    80% {
-      color: blue;
-    }
-    100% {
-      color: purple;
-    }
+}
+
+.title {
+  border: solid 2px rgb(255, 0, 0);
+  animation: border-pulse 1s ease-out infinite;
+}
+
+@keyframes border-pulse {
+  0% {
+    border-color: rgb(0, 0, 0);
   }
-  
- 
- 
+  100% {
+    border-color: rainbow;
+  }
+}
+
+h2 {
+  animation: rainbow-flash 1s ease-in-out infinite;
+}
+
+@keyframes rainbow-flash {
+  0% {
+    color: red;
+  }
+  20% {
+    color: orange;
+  }
+  40% {
+    color: rgb(126, 126, 40);
+  }
+  60% {
+    color: green;
+  }
+  80% {
+    color: blue;
+  }
+  100% {
+    color: purple;
+  }
+}
