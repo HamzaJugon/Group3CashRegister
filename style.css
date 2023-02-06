@@ -79,6 +79,7 @@ h1 {
   /* Styling the header for the change section */
   color: rgb(32, 121, 159);
   font-size: 27px;
+  text-align: center;
 }
 
 /* .change-output{
@@ -107,8 +108,7 @@ td {
 
 button:hover {
   background-color: green;
-  transform: scale(1.1);
-  font-weight: bold;
+  transform: scale(1.05);
 }
 
 .group-name {
@@ -168,5 +168,20 @@ h2 {
   }
   100% {
     color: purple;
+  }
+}
+
+footer {
+  height: 80px;
+  background-color: #2e8149;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .input-boxes input {
+    height: 30px;
+    width: 90%;
   }
 }
