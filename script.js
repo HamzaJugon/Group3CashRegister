@@ -62,15 +62,15 @@ function cashRegister(price, cash, cid) {
     // record of number of that currency being used as change.
     while (ChangeDue >= currencyValue && cid[i][1] > 0) {
       ChangeDue -= currencyValue;
-      ChangeDue = ChangeDue.toFixed(2);
-      cid[0][1] -= currencyValue;
+      ChangeDue = Number(ChangeDue.toFixed(2));
+      cid[i][1] -= currencyValue;
       currencyCount++;
     }
 
     // if more, push to change array.
     // display change as currency name, and amount.
     if (currencyCount > 0) {
-      change.push([currencyName, currencyValue * currencyCount]);
+      change.unshift([currencyName, currencyValue * currencyCount]);
     }
   }
 
