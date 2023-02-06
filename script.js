@@ -102,14 +102,14 @@ form.addEventListener("submit", function (event) {
   const change = document.createElement("h3");
 
   if (resultArr.length === 1) {
-    change.innerText = `Your change is $${resultArr[0][1]}`;
+    change.innerText = `Your change is $${resultArr[0][1]}.toFixed(2)}`;
     document.querySelector(".result").append(change);
   } else {
     let sum = 0;
     for (let i = 0; i < result.change.length; i++) {
       sum += result.change[i][1];
     }
-    change.innerText = `Your change is $${sum}`;
+    change.innerText = `Your change is $${sum.toFixed(2)}`;
     document.querySelector(".result").append(change);
   }
 
@@ -121,66 +121,71 @@ form.addEventListener("submit", function (event) {
       case "PENNY":
         quantity += resultArr[i][1] / 0.01;
         element = document.getElementById("penny");
-        element.innerText = quantity;
+        element.innerText = quantity.toFixed(2);
         element.style.color = "#CE1F6A";
         element.style.fontWeight = "bold";
         break;
       case "NICKEL":
         quantity += resultArr[i][1] / 0.05;
         element = document.getElementById("nickel");
-        element.innerText = quantity;
+        element.innerText = quantity.toFixed(2);
         element.style.color = "#CE1F6A";
         element.style.fontWeight = "bold";
         break;
       case "DIME":
         quantity += resultArr[i][1] / 0.1;
         element = document.getElementById("dime");
-        element.innerText = quantity;
+        element.innerText = quantity.toFixed(2);
         element.style.color = "#CE1F6A";
         element.style.fontWeight = "bold";
         break;
       case "QUARTER":
         quantity += resultArr[i][1] / 0.25;
         element = document.getElementById("quarter");
-        element.innerText = quantity;
+        element.innerText = quantity.toFixed(2);
         element.style.color = "#CE1F6A";
         element.style.fontWeight = "bold";
         break;
       case "ONE":
         quantity += resultArr[i][1] / 1;
         element = document.getElementById("one");
-        element.innerText = quantity;
+        element.innerText = quantity.toFixed(2);
         element.style.color = "#CE1F6A";
         element.style.fontWeight = "bold";
         break;
       case "FIVE":
         quantity += resultArr[i][1] / 5;
         element = document.getElementById("five");
-        element.innerText = quantity;
+        element.innerText = quantity.toFixed(2);
         element.style.color = "#CE1F6A";
         element.style.fontWeight = "bold";
         break;
       case "TEN":
         quantity += resultArr[i][1] / 10;
         element = document.getElementById("ten");
-        element.innerText = quantity;
+        element.innerText = quantity.toFixed(2);
         element.style.color = "#CE1F6A";
         element.style.fontWeight = "bold";
         break;
       case "TWENTY":
         quantity += resultArr[i][1] / 20;
         element = document.getElementById("twenty");
-        element.innerText = quantity;
+        element.innerText =quantity.toFixed(2);
         element.style.color = "#CE1F6A";
         element.style.fontWeight = "bold";
         break;
       case "ONE HUNDRED":
         quantity += resultArr[i][1] / 100;
         element = document.getElementById("hundred");
-        element.innerText = quantity;
+        element.innerText = quantity.toFixed(2);
         element.style.color = "#CE1F6A";
         element.style.fontWeight = "bold";
         break;
     }
   }
+});
+
+// HTMl Reload baby.
+document.getElementById("reloadButton").addEventListener("click", function(){
+  location.reload();
 });
