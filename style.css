@@ -116,8 +116,11 @@ button:hover {
 }
 
 .title {
-  border: solid 2px rgb(255, 0, 0);
-  animation: border-pulse 1s ease-out infinite;
+  border-bottom: solid 2px rgb(255, 0, 0);
+  animation: border-pulse 2s ease-out infinite;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
 }
 
 @keyframes border-pulse {
