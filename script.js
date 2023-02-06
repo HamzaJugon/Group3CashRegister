@@ -102,57 +102,84 @@ form.addEventListener("submit", function (event) {
   const change = document.createElement("h3");
 
   if (resultArr.length === 1) {
-    change.innerText = `Your change is $${resultArr[0][1]}.00`;
+    change.innerText = `Your change is $${resultArr[0][1]}`;
     document.querySelector(".result").append(change);
   } else {
     let sum = 0;
     for (let i = 0; i < result.change.length; i++) {
       sum += result.change[i][1];
     }
-    change.innerText = `Your change is $${sum}.00`;
+    change.innerText = `Your change is $${sum}`;
     document.querySelector(".result").append(change);
   }
 
   for (let i = 0; i < resultArr.length; i++) {
     let quantity = 0;
+    let element = "";
 
     switch (resultArr[i][0]) {
       case "PENNY":
         quantity += resultArr[i][1] / 0.01;
-        document.getElementById("penny").innerText = quantity;
-
+        element = document.getElementById("penny");
+        element.innerText = quantity;
+        element.style.color = "#CE1F6A";
+        element.style.fontWeight = "bold";
         break;
       case "NICKEL":
         quantity += resultArr[i][1] / 0.05;
-        document.getElementById("nickel").innerText = quantity;
+        element = document.getElementById("nickel");
+        element.innerText = quantity;
+        element.style.color = "#CE1F6A";
+        element.style.fontWeight = "bold";
         break;
       case "DIME":
         quantity += resultArr[i][1] / 0.1;
-        document.getElementById("dime").innerText = quantity;
+        element = document.getElementById("dime");
+        element.innerText = quantity;
+        element.style.color = "#CE1F6A";
+        element.style.fontWeight = "bold";
         break;
       case "QUARTER":
         quantity += resultArr[i][1] / 0.25;
-        document.getElementById("quarter").innerText = quantity;
+        element = document.getElementById("quarter");
+        element.innerText = quantity;
+        element.style.color = "#CE1F6A";
+        element.style.fontWeight = "bold";
         break;
       case "ONE":
         quantity += resultArr[i][1] / 1;
-        document.getElementById("one").innerText = quantity;
+        element = document.getElementById("one");
+        element.innerText = quantity;
+        element.style.color = "#CE1F6A";
+        element.style.fontWeight = "bold";
         break;
       case "FIVE":
         quantity += resultArr[i][1] / 5;
-        document.getElementById("five").innerText = quantity;
+        element = document.getElementById("five");
+        element.innerText = quantity;
+        element.style.color = "#CE1F6A";
+        element.style.fontWeight = "bold";
         break;
       case "TEN":
         quantity += resultArr[i][1] / 10;
-        document.getElementById("ten").innerText = quantity;
+        element = document.getElementById("ten");
+        element.innerText = quantity;
+        element.style.color = "#CE1F6A";
+        element.style.fontWeight = "bold";
         break;
       case "TWENTY":
         quantity += resultArr[i][1] / 20;
-        document.getElementById("twenty").innerText = quantity;
+        element = document.getElementById("twenty");
+        element.innerText = quantity;
+        element.style.color = "#CE1F6A";
+        element.style.fontWeight = "bold";
         break;
       case "ONE HUNDRED":
         quantity += resultArr[i][1] / 100;
-        document.getElementById("hundred").innerText = quantity;
+        element = document.getElementById("hundred");
+        element.innerText = quantity;
+        element.style.color = "#CE1F6A";
+        element.style.fontWeight = "bold";
         break;
     }
   }
